@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0%;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        html {
+            font-size: 62.5%;
+        }
+        
+        .mean {
+            width: 100vw;
+            height: 100vh;
+            background: #000;
+            display: grid;
+            place-items: center;
+        }
+        
+        .rot {
+            width: 15rem;
+            height: 15rem;
+            border-right: 0.3rem solid red;
+            border-radius: 50%;
+            animation: rot 2s linear infinite;
+            position: absolute;
+        }
+        
+        .centar {
+            width: 15rem;
+            height: 15rem;
+            position: relative;
+            /* background: white; */
+        }
+        
+        h1 {
+            position: absolute;
+            color: #fff;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+        
+        @keyframes rot {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mean">
+        <div class="centar">
+            <div class="rot"></div>
+            <h1>Loading</h1>
+        </div>
+    </div>
+</body>
+
+</html>
